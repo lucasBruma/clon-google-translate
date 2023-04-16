@@ -40,7 +40,7 @@ function App () {
         if (result == null) return
         setResult(result)
       })
-      .catch(() => { setResult('Error') })
+      .catch((e) => { setResult(e) })
   }, [debouncedFromText, fromLanguage, toLanguage])
 
   useEffect(() => {

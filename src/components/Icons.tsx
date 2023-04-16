@@ -13,7 +13,6 @@ export const SpeakerIcon = (): JSX.Element => {
 interface Props { darkMode: boolean }
 
 export const SunIcon = ({ darkMode }: Props): JSX.Element => {
-  console.log(darkMode)
   return <svg viewBox="0 0 24 24" width="24" height="24" filter={darkMode ? 'invert(1)' : 'none'}>
       <path
         filter={darkMode ? 'invert(1)' : 'none'}
