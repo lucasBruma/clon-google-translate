@@ -1,14 +1,16 @@
 import { type FromLanguage, type Language } from '../types.d'
 
-export async function translate ({
-  fromLanguage,
-  toLanguage,
-  text
-}: {
-  fromLanguage: FromLanguage
-  toLanguage: Language
-  text: string
-}) {
+export async function translate (
+  {
+    fromLanguage,
+    toLanguage,
+    text
+  }: {
+    fromLanguage: FromLanguage
+    toLanguage: Language
+    text: string
+  }
+) {
   const options: RequestInit = {
     method: 'POST',
     body: JSON.stringify({
