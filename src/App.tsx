@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useStore } from './hooks/useStore'
 import { Container, Row, Col, Button, Stack } from 'react-bootstrap'
+import { useMediaQuery } from 'react-responsive'
 import { AUTO_LANGUAGE, VOICE_FOR_LANGUAGE } from './constants'
 import { ArrowsIcon, ClipboardIcon, SpeakerIcon } from './components/Icons'
 import { LanguageSelector } from './components/LanguageSelector'
@@ -16,6 +17,7 @@ import Tooltip from 'react-bootstrap/Tooltip'
 function App () {
   const [copiedTooltip, setCopiedTooltip] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
+  const isMobile = useMediaQuery({ maxWidth: 767 })
   const target = useRef(null)
   const {
     fromLanguage,
@@ -95,9 +97,9 @@ function App () {
 
           </Col>
 
-          <Col xs='auto'>
-            <Button variant='link' disabled={fromLanguage === AUTO_LANGUAGE} onClick={interchangeLanguages}>
-              <ArrowsIcon />
+          <Col xs='auto' className={isMobile ? 'p-0' : ''}>
+            <Button variant='link' disabled={fromLanguage === AUTO_LANGUAGE} onClick={interchangeLanguages} className={isMobile ? 'p-0' : ''}>
+              <ArrowsIcon/>
             </Button>
           </Col>
 

@@ -23,7 +23,7 @@ export async function translate (
     }
   }
   try {
-    const response = await fetch('https://api-traductor.onrender.com/', options)
+    const response = await fetch('https://api-traductor.onrender.com', options)
     const data = await response.json()
     return data.message
   } catch (e: any) {
