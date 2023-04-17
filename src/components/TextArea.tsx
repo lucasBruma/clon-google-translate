@@ -5,7 +5,7 @@ type Props =
     | { type: SectionType.From, loading?: undefined, onChange: (value: string) => void, value: string }
     | { type: SectionType.To, loading?: boolean, onChange: (value: string) => void, value: string }
 
-const commonStyles = { border: 0, height: '200px', resize: 'none' }
+const commonStyles = { border: 0, height: '200px' }
 
 const getPlaceholder = ({ type, loading }: { type: SectionType, loading?: boolean }) => {
   if (loading === true) return 'Traduciendo...'
