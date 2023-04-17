@@ -4,14 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "server": "npx ts-node --esm api.ts",
     "tsc": "tsc",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest",
-    "start:backend": "nodemon --exec ts-node -esm index.ts",
-    "dev:server": "nodemon --watch './*.ts' --exec 'ts-node --esm' ./index.ts"
+    "test": "vitest"
   },
   "dependencies": {
     "@types/cors": "^2.8.13",
